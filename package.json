@@ -1,0 +1,11 @@
+{
+  "name": "jsnat",
+  "verson": "0.0.1",
+  "author": "Travis Peterson",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-sass": "^0.7.3",
+  }
+}
