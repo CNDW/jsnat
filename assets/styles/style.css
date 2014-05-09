@@ -1,2 +1,120 @@
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+form,
+p,
+nav,
+a {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
 body {
-  background: url("../images/cityscape.jpg") 50% 0% no-repeat fixed; }
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  background: url("../images/cityscape.jpg") 50% 0% no-repeat fixed;
+  width: 1000px;
+  position: relative;
+  left: 300px; }
+
+main {
+  background-color: white; }
+
+ul {
+  list-style: none;
+  position: static;
+  display: inline-block; }
+
+li {
+  list-style: none inside;
+  display: inline; }
+
+a {
+  text-decoration: none; }
+
+footer {
+  background-color: #2c2c2c; }
+
+form {
+  width: 260px;
+  margin: 0 auto; }
+
+nav {
+  height: 40px;
+  font-size: 0.7em; }
+
+header {
+  height: 130px; }
+  header img {
+    margin-top: 12px; }
+
+.header-actions {
+  margin-top: 30px;
+  width: 260px;
+  float: right; }
+  .header-actions form {
+    margin: 0; }
+
+.header-nav {
+  font-size: 0.7em;
+  width: 100%;
+  text-align: center; }
+  .header-nav li {
+    padding-left: 7px;
+    color: white; }
+    .header-nav li:first-child {
+      padding: 0; }
+      .header-nav li:first-child a {
+        padding: 0; }
+    .header-nav li a {
+      text-decoration: none;
+      padding-left: 8px;
+      color: white; }
+
+.search-field {
+  box-sizing: border-box;
+  position: relative;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: 240px 3px, center;
+  height: 25px;
+  width: 100%;
+  text-color: #9c9fa3; }
+
+.search-submit {
+  display: none; }
+
+.nav-bar {
+  text-align: center;
+  width: 100%;
+  display: block;
+  height: inherit; }
+
+.nav-button {
+  display: inline-block;
+  width: 16.6666667%;
+  height: 40px;
+  border-color: #cac9c9;
+  border-width: 1px 0 1px 0;
+  border-style: solid; }
+  .nav-button a {
+    padding-top: 14px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #535557; }
+    .nav-button a:hover {
+      background-color: #dbdbdb; }
