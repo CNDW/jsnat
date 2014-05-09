@@ -2,24 +2,29 @@
 <html lang="en">
 	<head>
     <meta charset="utf-8">
-		<meta name="description" content="Crispin and Mulberry: World Travelers">
+		<meta name="description" content="Crispin & Mulberry: World Travelers">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Crispin and Mulberry: World Travelers</title>
+		<title>Crispin & Mulberry: World Travelers</title>
 		<link rel='stylesheet' href='styles/style.css'>
 	</head>
+
 	<body>
+
 		<header>
-			<img src="images/logo.png" alt="Crispin and Mulberry: World Travelers">
+			<img src="images/logo.png" alt="Crispin & Mulberry: World Travelers">
+			<form action="">
+				<input id="search-field" type="search" value="Search">
+				<input type="submit" value="Submit">
+			</form>
+			<ul>
+				<li>My Account</li>
+				<li>My Subscriptions</li>
+				<li>My Articles</li>
+			</ul>	
 		</header>
-		<form action="">
-			<input id="search-field" type="search" value="Search">
-		</form>
-		<ul>
-			<li>My Account</li>
-			<li>My Subscriptions</li>
-			<li>My Articles</li>
-		</ul>
+
 		<main>
+
 			<nav>
 				<ul>
 					<li>Destinations</li>
@@ -30,6 +35,7 @@
 					<li>Contact Us</li>
 				</ul>
 			</nav>
+
 			<div class="carousel">
 				<img src="images/slide1.jpg">
 				<ul class="carousel-thumbnails">
@@ -37,22 +43,24 @@
 						<img src="images/slide1.jpg">
 					</li>
 					<li class="carousel-thumbnail">
-						<img src="images/slide1.jpg">
+						<img src="images/slide2.jpg">
 					</li>
 					<li class="carousel-thumbnail">
-						<img src="images/slide1.jpg">
+						<img src="images/slide3.jpg">
 					</li>
 					<li class="carousel-thumbnail">
-						<img src="images/slide1.jpg">
+						<img src="images/slide4.jpg">
 					</li>
 				</ul>
 			</div>
+
 			<div class="ads">
-				<img src="ad1.jpg">
-				<img src="ad2.jpg">
+				<img src="images/ad1.jpg">
+				<img src="images/ad2.jpg">
 			</div>
+
 			<div class="categories">
-				<h2>Browse Categories</h2>
+				<h2><img src="images/category-icon.png">Browse Categories</h2>
 				<h3>Popular Destinations</h3>
 				<ul>
 					<li>United States</li>
@@ -76,43 +84,127 @@
 					<li>All Vacations</li>
 				</ul>
 			</div>
+
 			<div class="articles">
-				<h2>Recent Articles</h2>
+				<h2><img src="images/article-icon.png">Recent Articles</h2>
 				<ul>
 					<li>
 						<h3>Don't Miss the Parades at DisneyWorld</h3>
-						<img src="articlethumb1">
+						<img src="images/articlethumb1.jpg">
 						<p>The parades at Disney World are a one of a kind celebration full of all your favorite Disney characters and music. The entertainment never stops as parades are scheduled throughout the entire day.</p>
 					</li>
 					<li>
 						<h3>Get Your Kicks in Downtown Las Vegas</h3>
-						<img src="articlethumb2">
+						<img src="images/articlethumb2.jpg">
 						<p>Get off the strip and check out what Old Vegas has to offer. From shark infested water slides to the nightly Fremont Street Experience it's sure to please adventurers of all ages.</p>
 					</li>
 					<li>
 						<h3>Don't Miss Deep Dish in Chicago</h3>
-						<img src="articlethumb3">
+						<img src="images/articlethumb3.jpg">
 						<p>Deep dish pizza is as synonymous with Chicago as Thin Crust is to New York. Any way you slice it, any trip to the windy city is incomplete without an italian flavor explosion in your mouth.</p>
 					</li>
 				</ul>
 			</div>
+
 			<div class="videos">
+				<h2><img src="images/video-icon.png">Popular Videos</h2>
 				<ul>
 					<li>
 						<h3>Team Mongoose</h3>
-						<img src="video-overlay.png">
-						<img src="play-button.png">
-						<img src="videothumb1.jpg">
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb1.jpg">
 					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>
+						<h3>St Paul's Cathedral</h3>
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb2.jpg">
+					</li>
+					<li>
+						<h3>Holywood and Highland</h3>
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb3.jpg">
+					</li>
+					<li>
+						<h3>Lake Wissota</h3>
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb4.jpg">
+					</li>
+					<li>
+						<h3>The Bellagio Fountains</h3>
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb5.jpg">
+					</li>
+					<li>
+						<h3>The Atlantic Coast</h3>
+						<img src="images/video-overlay.png">
+						<img src="images/play-button.png">
+						<img src="images/videothumb6.jpg">
+					</li>
 				</ul>
 			</div>
+
+			<div class="newsletter">
+				<h3><img src="images/envelope-icon.png">SIGN UP FOR OUR NEWSLETTER</h3>
+				<form action="">
+					<input id="newsletter-signup" type="email" value="user@domain.com">
+					<div class="newsletter-checkboxes">
+						<h4>Select the newsletters you'd like to recieve</h4>
+						<input id="getaway-checkbox" type="checkbox" value="true" checked="true" name="Destinations and Getaways">
+						<label>Destinations & Getaways</label>
+						<input id="tips-checkbox" type="checkbox" value="true" checked="true" name="Weekly Travel Tips">
+						<label>Weekly Travel Tips</label>
+					</div>
+					<input type="submit" value="Submit">
+				</form>
+				<div class="newsletter-footer">
+					<a href="">Privacy Policy</a>
+					<a href="">Terms of Use</a>
+				</div>
+			</div>
+
+			<div class="contests">
+				<h3><img src="images/trophy-icon.png">CURRENT CONTESTS</h3>
+				<ul>
+					<li>
+						<img src="images/contestthumb1.jpg">
+						<p>Win an all inclusive trip to visit the famous Yeti Shrine deep in the heart of Asia</p>
+					</li>
+					<li>
+						<img src="images/contestthumb2.jpg">
+						<p>Win a mythical trip to Bath that includes a guided tour of Stonehenge</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="twitter-widget">
+			</div>
 		</main>
+
 		<footer>
+			<ul>
+				<li>Privacy Policy</li>
+				<li>Terms of Use</li>
+				<li>Site Map</li>
+				<li>Contact Us</li>
+			</ul>
+			<ul>
+				<li>© 2013 Crispin & Mulberry</li>
+				<li>1640 Riverside Drive, Hill Valley, California, 95420</li>
+			</ul>
+			<ul>
+				<li><a href=""><img src="images/facebook-icon.png"></a></li>
+				<li><a href=""><img src="images/flickr-icon.png"></a></li>
+				<li><a href=""><img src="images/twitter-icon.png"></a></li>
+				<li><a href=""><img src="images/vimeo-icon.png"></a></li>
+				<li><a href=""><img src="images/rss-icon.png"></a></li>
+			</ul>
 		</footer>
+
 	</body>
+
 </html>
