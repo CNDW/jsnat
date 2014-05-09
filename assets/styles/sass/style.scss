@@ -1,7 +1,10 @@
+$light-gray: #dbdbdb;
+$medium-gray: #cac9c9;
+
 //Color Variables
 $primary-background-color: #ffffff;
-$secondary-background-color: #dbdbdb;
-$tertiary-background-color: #cac9c9;
+$secondary-background-color: $light-gray;
+$tertiary-background-color: $medium-gray;
 $nav-background-color-hover: #e2e4e7;
 $nav-background-color: #ffffff;
 $nav-font-color: #535557;
@@ -14,7 +17,7 @@ $secondary-text-color: #ffffff;
 $tertiary-text-color: #535557;
 
 //Measurements
-$gutter-width: 20px;
+$gutter-padding: 10px;
 
 //Resets
 div,
@@ -41,6 +44,25 @@ a {
 @media screen and (min-width: 1600px) {
 }
 
+.section {
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+}
+
+.col {
+	display: block;
+	float: left;
+}
+
+.w70 {
+	width: 70%;
+}
+
+.w30 {
+	width: 30%;
+}
+
 //Basic CSS scaffolding stylings
 
 html {
@@ -51,6 +73,7 @@ body {
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
+	color: $primary-text-color;
 	line-height: 1;
 	background: url('../images/cityscape.jpg') 50% 0% no-repeat fixed;
 	//width: 62.5%; todo: fix responsive widths
@@ -91,6 +114,19 @@ nav {
 	height: 40px;
 	font-size: 0.7em;
 }
+
+div {
+	padding: $gutter-padding;
+}
+
+h1 {
+	font-size: 1.125em;
+}
+
+p {
+	font-size: 0.7em;
+}
+
 //Specific Header Stylings
 
 header {
@@ -102,8 +138,9 @@ header {
 
 .header-actions {
 	margin-top: 30px;
-	width: 260px;
+	width: 258px;
 	float: right;
+	padding: 0;
 	form {
 		margin: 0;
 	}
@@ -133,12 +170,11 @@ header {
 .search-field {
 	box-sizing: border-box;
 	position: relative;
-	background-image: url('../images/search-icon.png');
+	background-image: url("../images/searchbar-background.jpg");
 	background-repeat: no-repeat;
-	background-position: 240px 3px, center;
-	height: 25px;
-	width: 100%;
-	text-color: #9c9fa3;
+	height: 24px;
+	width: 258px;
+	color: #d0d0d0;
 }
 .search-submit {
 	display: none;
@@ -150,22 +186,64 @@ header {
 	width: 100%;
 	display: block;
 	height: inherit;
+	background-image: url("../images/navbar-background.jpg");
 }
 .nav-button {
+	background: transparent;
 	display: inline-block;
 	width: 16.6666667%;
 	height: 40px;
-	border-color: $tertiary-background-color;
-	border-width: 1px 0 1px 0;
-	border-style: solid;
 	a {
 		padding-top: 14px;
 		display: block;
 		height: 100%;
 		width: 100%;
 		color: $nav-font-color;
-		&:hover {
-			background-color: $secondary-background-color;
+		border-color: $tertiary-background-color;
+		border-width: 1px 0 1px 0;
+		border-style: solid;
+		&.active-link {
+			top: -4px;
+			background-color: $primary-background-color;
+			position: relative;
+			height: 44px;
+			border-width: 1px 1px 0 1px;
 		}
+		&:hover {
+			background-image: url("../images/overlay.png");
+		}
+	}
+}
+
+//specific Carousel Stylings
+.carousel-view {
+	padding: 0;
+	margin-bottom: -70px;
+}
+.view-info {
+	background-image: url("../images/overlay.png");
+	position: relative;
+	bottom: 70px;
+	height: 70px;
+	padding: 16px;
+	p {
+		padding-top: 5px;
+	}
+}
+.carousel-thumbnails {
+	padding: $gutter-padding;
+	height: 100px;
+}
+.carousel-thumbnail {
+	width: 25%;
+	display: inline-block;
+	padding: 0 5px 0 5px;
+	&.active-image {
+		border-color: $headline-background-color;
+		border-style: solid;
+		border-width: 3px;
+	}
+	img {
+		width: 100%;
 	}
 }
