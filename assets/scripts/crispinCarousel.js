@@ -1,6 +1,6 @@
 var CrispinCarousel = function(element) {
 	this.$element = element;
-	this.images = this.getSlides();
+	this.slides = this.getSlides();
 	this.currentSlide = this.getCurrentSlide();
 }
 
@@ -10,10 +10,8 @@ CrispinCarousel.prototype.getSlides = function(){
 	imgs.each(function(index){
 		if (index < 4){
 			slides.push($(this).attr('src'));
-		} else {
-			return;
 		}
-		});
+	});
 	return slides;
 }
 

@@ -12,21 +12,30 @@ describe("CrispinCarousel", function() {
 
 describe("carousel object", function(){
 
-	it("should have an array of strings as it's images property", function(){
-		expect(carousel.images instanceof Array).toBeTruthy();
-		expect(typeof carousel.images[0]).toBe('string');
+	it("should have an array of strings as it's slides property", function(){
+		expect(carousel.slides instanceof Array).toBeTruthy();
+		expect(typeof carousel.slides[0]).toBe('string');
 	});
 
-	it("should have images", function(){
-		expect(carousel.images.length).toBeGreaterThan(0);
+	it("should have slides", function(){
+		expect(carousel.slides.length).toBeGreaterThan(0);
 	});
 
-	it("should have no more than 4 images", function() {
-		expect(carousel.images.length).toBeLessThan(5);
+	it("should have no more than 4 slides", function() {
+		expect(carousel.slides.length).toBeLessThan(5);
 	});
 
 	it("should return a jquery object with the class '.active-image'", function(){
 		expect(typeof carousel.currentSlide).toBe('object');
 		expect(carousel.currentSlide.hasClass('active-image')).toBeTruthy();
+	});
+});
+
+describe("Slide Manipulation", function(){
+
+	var firstSlideIndex = 0;
+	var newSlideIndex = 0;
+	it("should add .active-image to selected slide with the setCurrentSlide", function(){
+		expect(firstSlideIndex).not.toEqual(newSlideIndex);
 	});
 });

@@ -118,7 +118,7 @@ form {
 
 nav {
 	height: 40px;
-	font-size: 0.7em;
+	font-size: 0.75em;
 }
 
 div {
@@ -126,11 +126,11 @@ div {
 }
 
 h1 {
-	font-size: 1.125em;
+	font-size: 1.5em;
 }
 
 h2 {
-	font-size: 0.7em;
+	font-size: 0.75em;
 	color: $light-text-color;
 	background-color: $headline-background-color;
 	display: inline-block;
@@ -148,8 +148,15 @@ h2 {
 }
 
 h3 {
-	font-size: 0.7em;
+	font-size: 0.875em;
 	font-weight: bold;
+	::after {
+		fot-weight: normal;
+	}
+}
+
+h4 {
+	font-size: 0.875em;
 }
 
 p {
@@ -175,8 +182,8 @@ header {
 }
 
 .header-actions {
-	margin-top: 30px;
-	width: 258px;
+	margin-top: 30px;  
+	width: 258px; 
 	float: right;
 	padding: 0;
 	form {
@@ -185,11 +192,11 @@ header {
 }
 
 .header-nav {
-	font-size: 0.7em;
+	font-size: 0.75em;
 	width: 100%;
 	text-align: center;
 	li {
-		padding-left: 7px;
+		padding-left: 6px;
 		color: $light-text-color;
 		&:first-child {
 			padding: 0;
@@ -252,7 +259,6 @@ header {
 		}
 	}
 }
-
 //specific Carousel Stylings
 .carousel-view {
 	padding: 0;
@@ -281,7 +287,7 @@ header {
 		display: none;
 	}
 }
-.carousel-thumbnail {
+.carousel-thumbnail { 
 	position: relative;
 	width: 25%;
 	display: inline-block;
@@ -301,5 +307,8 @@ header {
 		}
 	}
 }
-
 //specific categories stylings
+
+.category-list {
+	font-size: 0.875em;
+}  

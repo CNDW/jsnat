@@ -73,16 +73,16 @@ form {
 
 nav {
   height: 40px;
-  font-size: 0.7em; }
+  font-size: 0.75em; }
 
 div {
   padding: 10px; }
 
 h1 {
-  font-size: 1.125em; }
+  font-size: 1.5em; }
 
 h2 {
-  font-size: 0.7em;
+  font-size: 0.75em;
   color: white;
   background-color: #0084d9;
   display: inline-block;
@@ -98,8 +98,13 @@ h2 {
   overflow: hidden; }
 
 h3 {
-  font-size: 0.7em;
+  font-size: 0.875em;
   font-weight: bold; }
+  h3 ::after {
+    fot-weight: normal; }
+
+h4 {
+  font-size: 0.875em; }
 
 p {
   font-size: 0.7em; }
@@ -125,11 +130,11 @@ header {
     margin: 0; }
 
 .header-nav {
-  font-size: 0.7em;
+  font-size: 0.75em;
   width: 100%;
   text-align: center; }
   .header-nav li {
-    padding-left: 7px;
+    padding-left: 6px;
     color: white; }
     .header-nav li:first-child {
       padding: 0; }
@@ -222,3 +227,6 @@ header {
       padding: 0 5px 0 5px;
       top: -9px;
       left: 0; }
+
+.category-list {
+  font-size: 0.875em; }
