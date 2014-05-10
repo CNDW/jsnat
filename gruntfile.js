@@ -1,5 +1,6 @@
 /*global module*/
 module.exports = function(grunt) {
+	'use strict';
 
   // Project configuration.
   grunt.initConfig({
@@ -14,9 +15,10 @@ module.exports = function(grunt) {
       js: {
         files: [
           'assets/scripts/*.js',
-          'Gruntfile.js'
+          'Gruntfile.js',
+          'specs/*Spec.js'
         ],
-        tasks: ['jshint']
+        tasks: ['jshint', 'jasmine']
       }
     },
     sass: {
@@ -31,13 +33,20 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       all: ['Gruntfile.js', 'assets/scripts/*.js']
-    }
+    },
+    jasmine: {
+    	src: 'assets/scripts/*.js',
+    		options: {
+    			specs: 'specs/*.js'
+    		} 
+    } 
   });
 
   // Load the Grunt plugins.
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Register the default tasks.
   grunt.registerTask('default', ['watch']);
