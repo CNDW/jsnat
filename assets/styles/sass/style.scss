@@ -12,8 +12,8 @@ $nav-font-color-active: #282b2e;
 $footer-background-color: #2c2c2c;
 $headline-background-color: #0084d9;
 $headline-font-color: #ffffff;
-$primary-text-color: #282b2e;
-$secondary-text-color: #ffffff;
+$dark-text-color: #282b2e;
+$light-text-color: #ffffff;
 $tertiary-text-color: #535557;
 
 //Measurements
@@ -50,6 +50,16 @@ a {
 	padding: 0px;
 }
 
+.body-offset {
+	//width: 18.75%;  //1600 width
+	width: 14.28%; //1400 width
+}
+
+.body-col {
+	//width: 62.5%;  //1600 width
+	width: 71.44%;
+}
+
 .col {
 	display: block;
 	float: left;
@@ -73,13 +83,9 @@ body {
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	color: $primary-text-color;
+	color: $dark-text-color;
 	line-height: 1;
 	background: url('../images/cityscape.jpg') 50% 0% no-repeat fixed;
-	//width: 62.5%; todo: fix responsive widths
-	width: 1000px;
-	position: relative;
-	left: 300px;
 }
 
 main {
@@ -123,8 +129,39 @@ h1 {
 	font-size: 1.125em;
 }
 
+h2 {
+	font-size: 0.7em;
+	color: $light-text-color;
+	background-color: $headline-background-color;
+	display: inline-block;
+	position: relative;
+	top: -3px;
+	left: 6px;
+}
+
+.headline {
+	height: 34px;
+	width: 100%;
+	margin-right: -5px;
+	background-color: $headline-background-color;
+	overflow: hidden;
+}
+
+h3 {
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
 p {
 	font-size: 0.7em;
+}
+
+img {
+	width: 100%;
+}
+
+.icon {
+	width: auto;
 }
 
 //Specific Header Stylings
@@ -133,6 +170,7 @@ header {
 	height: 130px;
 	img {
 		margin-top: 12px;
+		width: auto;
 	}
 }
 
@@ -152,7 +190,7 @@ header {
 	text-align: center;
 	li {
 		padding-left: 7px;
-		color: $secondary-text-color;
+		color: $light-text-color;
 		&:first-child {
 			padding: 0;
 			a {
@@ -162,7 +200,7 @@ header {
 		a {
 			text-decoration: none;
 			padding-left: 8px;
-			color: $secondary-text-color;
+			color: $light-text-color;
 		}
 	}
 }
@@ -237,9 +275,6 @@ header {
 }
 .thumbnail-view {
 	padding: 0;
-	img {
-		width: 100%;
-	}
 	.indicator {
 		width: 100%;
 		height: 9px;
@@ -266,3 +301,5 @@ header {
 		}
 	}
 }
+
+//specific categories stylings

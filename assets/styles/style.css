@@ -22,6 +22,12 @@ a {
   margin: 0px;
   padding: 0px; }
 
+.body-offset {
+  width: 14.28%; }
+
+.body-col {
+  width: 71.44%; }
+
 .col {
   display: block;
   float: left; }
@@ -41,10 +47,7 @@ body {
   font-style: normal;
   color: #282b2e;
   line-height: 1;
-  background: url("../images/cityscape.jpg") 50% 0% no-repeat fixed;
-  width: 1000px;
-  position: relative;
-  left: 300px; }
+  background: url("../images/cityscape.jpg") 50% 0% no-repeat fixed; }
 
 main {
   background-color: white; }
@@ -78,13 +81,40 @@ div {
 h1 {
   font-size: 1.125em; }
 
+h2 {
+  font-size: 0.7em;
+  color: white;
+  background-color: #0084d9;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  left: 6px; }
+
+.headline {
+  height: 34px;
+  width: 100%;
+  margin-right: -5px;
+  background-color: #0084d9;
+  overflow: hidden; }
+
+h3 {
+  font-size: 0.7em;
+  font-weight: bold; }
+
 p {
   font-size: 0.7em; }
+
+img {
+  width: 100%; }
+
+.icon {
+  width: auto; }
 
 header {
   height: 130px; }
   header img {
-    margin-top: 12px; }
+    margin-top: 12px;
+    width: auto; }
 
 .header-actions {
   margin-top: 30px;
@@ -172,8 +202,6 @@ header {
 
 .thumbnail-view {
   padding: 0; }
-  .thumbnail-view img {
-    width: 100%; }
   .thumbnail-view .indicator {
     width: 100%;
     height: 9px;
