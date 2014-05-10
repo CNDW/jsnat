@@ -1,17 +1,25 @@
-var CrispinCarousel = function(slideshowElement) {
-	this.images = this.slides(slideshowElement);
+var CrispinCarousel = function(element) {
+	this.$element = element;
+	this.images = this.getSlides();
+	this.currentSlide = this.getCurrentSlide();
 }
 
-CrispinCarousel.prototype.slides = function(element){
-	var imgs = $(element).find('img');
+CrispinCarousel.prototype.getSlides = function(){
+	var imgs = $(this.$element).find('img');
 	var slides = [];
 	imgs.each(function(index){
 		if (index < 4){
 			slides.push($(this).attr('src'));
+		} else {
+			return;
 		}
 		});
 	return slides;
 }
 
-var carousel = new CrispinCarousel('.carousel-thumbnail'); 
+CrispinCarousel.prototype.getCurrentSlide = function(){
+	return $(this.$element).find('.active-image');
+}
+
+var carousel = new CrispinCarousel('.carousel-thumbnails'); 
 
