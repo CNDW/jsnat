@@ -1,3 +1,4 @@
+/*global module*/
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -5,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       css: {
-        files: [
+        files: [ 
           '**/*.scss'
         ],
         tasks: ['sass']
