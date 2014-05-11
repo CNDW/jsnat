@@ -12,7 +12,6 @@ describe("CrispinCarousel", function() {
 		var test = new CrispinCarousel('.carousel');
 		expect(typeof test.$slides).toBe('object');
 	});
-	it("should set 'index-data=' attribute to each li to corresponding image index in the carousel.images array", function(){});
 });  
 
 describe("carousel object", function(){
@@ -100,8 +99,11 @@ describe("getSlides()", function(){
 describe("updateCarouselView()", function(){
 	it("should set the $view image to the $activeSlide image", function(){
 		carousel.$activeSlide = carousel.$slides[1];
-		expect($(carousel.$view).attr('src')).toBe(carousel.images[0]);
+		expect($(carousel.$view).find('img').attr('src')).toBe(carousel.images[0]);
 		carousel.updateCarouselView();
-		expect($(carousel.$view).attr('src')).toBe(carousel.images[1]);
+		expect($(carousel.$view).find('img').attr('src')).toBe(carousel.images[1]);
+	});
+	it("should set the extra info from the hidden thumbnail elements to the info-view", function(){
+		carousel.$activeSlide = carousel.$slides[1];
 	});
 });

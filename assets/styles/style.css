@@ -228,9 +228,9 @@ header {
       top: -9px;
       left: 0; }
 
-.info {
+.hidden {
   display: none; }
-  .info * {
+  .hidden * {
     display: none; }
 
 .category-list {

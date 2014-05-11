@@ -24,7 +24,7 @@ CrispinCarousel.prototype.getSlides = function(){
 		images.push($(this).find('img').first().attr('src'));
 		$(this).data('index-data', index);
 	});
-	this.$view = $(this.$element).find('img:first');
+	this.$view = $(this.$element).find('.carousel-view');
 	this.images = images;
 	this.$slides = slides;
 	return slides;
@@ -39,7 +39,9 @@ CrispinCarousel.prototype.setNewSlide = function($newSlide){
 
 CrispinCarousel.prototype.updateCarouselView = function(){
 	var i = $(this.$activeSlide).data('index-data');
-	$(this.$view).attr("src", this.images[i]);
+	var info = $(this.$activeSlide).find('.view-info').clone().removeClass('hidden');
+	$(this.$view).find('img').attr("src", this.images[i]);
+	$(this.$view).find('.view-info').replaceWith(info);
 }
 
 var carousel = new CrispinCarousel('.carousel'); 
