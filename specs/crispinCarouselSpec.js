@@ -87,3 +87,21 @@ describe("setNewSlide()", function(){
 		expect($(carousel.$slides[1]).hasClass('active-image')).toBeTruthy();
 	});
 });
+
+describe("getSlides()", function(){
+	it("should find the first img tag after the parent $element and set it to the $view property", function(){
+		expect(typeof carousel.$view).not.toBe('undefined');
+	});
+	it("should return no more than 4 slide objects in an array", function(){
+		expect(carousel.getSlides().length).toBeLessThan(4);
+	});
+});
+
+describe("updateCarouselView()", function(){
+	it("should set the $view image to the $activeSlide image", function(){
+		carousel.$activeSlide = carousel.$slides[1];
+		expect($(carousel.$view).attr('src')).toBe(carousel.images[0]);
+		carousel.updateCarouselView();
+		expect($(carousel.$view).attr('src')).toBe(carousel.images[1]);
+	});
+});
