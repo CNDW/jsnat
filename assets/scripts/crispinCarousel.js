@@ -1,23 +1,31 @@
 var CrispinCarousel = function(element) {
-	this.$element = element;
-	this.slides = this.getSlides();
-	this.currentSlide = this.getCurrentSlide();
+	this.$element = $(element);
+	this.$slides = this.getSlides();
+	this.images = this.getImages();
+	this.$activeSlide = this.getActiveSlide();
 }
 
-CrispinCarousel.prototype.getSlides = function(){
-	var imgs = $(this.$element).find('img');
-	var slides = [];
+CrispinCarousel.prototype.getImages = function(){
+	var imgs = $(this.$slides).find('img');
+	var images = [];
 	imgs.each(function(index){
 		if (index < 4){
-			slides.push($(this).attr('src'));
+			images.push($(this).attr('src'));
 		}
 	});
-	return slides;
+	return images;
 }
 
-CrispinCarousel.prototype.getCurrentSlide = function(){
+CrispinCarousel.prototype.getActiveSlide = function(){
+	if (this.$element.find('.active-image').length < 1) {
+		this.$slides.first().addClass('active-image');
+	}
 	return $(this.$element).find('.active-image');
 }
 
-var carousel = new CrispinCarousel('.carousel-thumbnails'); 
+CrispinCarousel.prototype.getSlides = function(){
+	return $(this.$element).find('li:has(img)');
+}
+
+var carousel = new CrispinCarousel('.carousel'); 
 
