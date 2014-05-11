@@ -307,6 +307,13 @@ header {
 		}
 	}
 }
+
+.info {
+	display: none;
+	* {
+		display: none;
+	}
+}
 //specific categories stylings
 
 .category-list {

@@ -228,5 +228,10 @@ header {
       top: -9px;
       left: 0; }
 
+.info {
+  display: none; }
+  .info * {
+    display: none; }
+
 .category-list {
   font-size: 0.875em; }
