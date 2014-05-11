@@ -92,7 +92,7 @@ describe("getSlides()", function(){
 		expect(typeof carousel.$view).not.toBe('undefined');
 	});
 	it("should return no more than 4 slide objects in an array", function(){
-		expect(carousel.getSlides().length).toBeLessThan(4);
+		expect(carousel.getSlides().length).toBeLessThan(5);
 	});
 });
 
@@ -102,8 +102,5 @@ describe("updateCarouselView()", function(){
 		expect($(carousel.$view).find('img').attr('src')).toBe(carousel.images[0]);
 		carousel.updateCarouselView();
 		expect($(carousel.$view).find('img').attr('src')).toBe(carousel.images[1]);
-	});
-	it("should set the extra info from the hidden thumbnail elements to the info-view", function(){
-		carousel.$activeSlide = carousel.$slides[1];
 	});
 });

@@ -18,7 +18,7 @@ CrispinCarousel.prototype.getActiveSlide = function(){
 }
 
 CrispinCarousel.prototype.getSlides = function(){
-	var slides = $(this.$element).find('li:has(img)').slice(0, 3);
+	var slides = $(this.$element).find('li:has(img)').slice(0, 4);
 	var images = [];
 	slides.each(function(index){
 		images.push($(this).find('img').first().attr('src'));
@@ -42,6 +42,16 @@ CrispinCarousel.prototype.updateCarouselView = function(){
 	var info = $(this.$activeSlide).find('.view-info').clone().removeClass('hidden');
 	$(this.$view).find('img').attr("src", this.images[i]);
 	$(this.$view).find('.view-info').replaceWith(info);
+}
+
+CrispinCarousel.prototype.setNextSlide = function(){
+	var i = $(this.$activeSlide).data('index-data');
+	if (i < 3){
+		i += 1;
+	} else {
+		i = 0;
+	}
+	this.setNewSlide(this.$slides[i]);
 }
 
 var carousel = new CrispinCarousel('.carousel'); 
