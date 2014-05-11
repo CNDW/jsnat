@@ -2,6 +2,8 @@ var CrispinCarousel = function(element) {
 	this.$element = $(element);
 	this.getSlides();
 	this.getActiveSlide();
+	this.intevalID = null;
+	this.startSlideShow();
 }
 
 CrispinCarousel.prototype.getActiveSlide = function(){
@@ -52,6 +54,15 @@ CrispinCarousel.prototype.setNextSlide = function(){
 		i = 0;
 	}
 	this.setNewSlide(this.$slides[i]);
+}
+
+CrispinCarousel.prototype.startSlideShow = function(interval){
+	this.interval = typeof interval === 'number' ? interval : 4000;
+	this.slideShow = setInterval($.proxy(this.setNextSlide, this), this.interval);
+}
+
+CrispinCarousel.prototype.stopSlideShow = function(){
+	clearInterval(this.slideShow);
 }
 
 var carousel = new CrispinCarousel('.carousel'); 

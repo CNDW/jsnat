@@ -104,3 +104,48 @@ describe("updateCarouselView()", function(){
 		expect($(carousel.$view).find('img').attr('src')).toBe(carousel.images[1]);
 	});
 });
+
+describe("setNextSlide()", function(){
+	it("should set the $activeSlide to the next item in the array", function(){
+		expect($(carousel.$activeSlide).data('index-data')).toBe(0);
+		carousel.setNextSlide();
+		expect($(carousel.$activeSlide).data('index-data')).toBe(1);
+	});
+});
+
+describe("startSlideShow()", function(){
+	it("should assign a interval ID to the carousel's .slideShow property", function(){
+		expect(typeof carousel.slideShow).toBe('number');
+	});
+	it("should start on the carousel's init and use .setNextSlide() and accept an interval time as a parameter", function(){
+		clearInterval(carousel.slideShow);
+		jasmine.clock().install();
+		spyOn(carousel, 'setNextSlide');
+
+		carousel.startSlideShow(1000);
+		jasmine.clock().tick(100);
+		expect(carousel.setNextSlide).not.toHaveBeenCalled();
+
+		jasmine.clock().tick(1000);
+		expect(carousel.setNextSlide).toHaveBeenCalled();
+		jasmine.clock().uninstall();
+	});
+});
+
+describe("stopSlideShow()", function(){
+	it("should stop the carousel's slideshow interval", function(){
+		clearInterval(carousel.slideShow);
+		jasmine.clock().install();
+		spyOn(carousel, 'setNextSlide');
+
+		carousel.startSlideShow(1000);
+		jasmine.clock().tick(1001);
+		expect(carousel.setNextSlide.calls.count()).toEqual(1);
+
+		carousel.stopSlideShow();
+
+		jasmine.clock().tick(2001);
+		expect(carousel.setNextSlide.calls.count()).toEqual(1);
+		jasmine.clock().uninstall();
+	});
+});
