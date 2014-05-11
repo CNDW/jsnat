@@ -32,19 +32,31 @@ describe("carousel object", function(){
 
 });
 
-describe("$activeSlide", function(){
+describe("getActiveSlide", function(){
 
-	it("should not have more than one active-image", function(){
-		expect(carousel.$activeSlide.length).toBeLessThan(2);
+	it("should clear '.active-image' from all but the first slide if more than one slide has the class", function(){
+		//dirty the object
+		carousel.$slides.addClass('active-image');
+		expect(carousel.$element.find('.active-image').length).toBeGreaterThan(1);
+		//run the function to see if it preforms
+		carousel.getActiveSlide();
+		expect(carousel.$element.find('.active-image').length).toBe(1);
 	});
 
 	it("should set the first slide to '.active-image' if none are found", function(){
 		//dirty the object
 		carousel.$activeSlide.removeClass('active-image'); 
 		expect(carousel.$element.find('.active-image').length).toBe(0); 
-		//run the function that .$activeSlide uses see if it performs as expected
+		//run the function to see if it preforms as expected
 		carousel.getActiveSlide(); 
 		expect(carousel.$activeSlide.hasClass('active-image')).toBeTruthy();
+	});
+});
+
+describe("$activeSlide", function(){
+
+	it("should not have more than one active-image", function(){
+		expect(carousel.$activeSlide.length).toBeLessThan(2);
 	});
 
 	it("should return a jquery object with the class '.active-image'", function(){
@@ -54,19 +66,24 @@ describe("$activeSlide", function(){
 
 });
 
-describe("setNewSlide", function(){
+describe("setNewSlide()", function(){
 
-	var firstSlideIndex = carousel.$activeSlide;
-	var newSlideIndex = 0;
 	it("should add .active-image to selected slide", function(){
+		expect($(carousel.$slides[1]).hasClass("active-image")).not.toBeTruthy();
+		carousel.setNewSlide(carousel.$slides[1]);
+		expect($(carousel.$slides[1]).hasClass("active-image")).toBeTruthy();
 	});
+
 	it("should remove .active-image to previously active slide", function(){
-		
+		carousel.setNewSlide(carousel.$slides[1]);
+		expect($(carousel.$slides[0]).hasClass('active-image')).not.toBeTruthy();
 	});
-	it("should update the carousel object's $activeSlide property to match the new slide with .active-image", function(){
-		
-	});
-	it("should take an argument for the slide to be set as the $activeSlide in the form of a jquery selected node", function(){
-		
+
+	it("should update the carousel object's $activeSlide property to match the new slide", function(){
+		expect($(carousel.$activeSlide).data("index-data")).toBe(0);
+		expect($(carousel.$slides[1]).hasClass('active-image')).not.toBeTruthy();
+		carousel.setNewSlide(carousel.$slides[1]);
+		expect($(carousel.$activeSlide).data("index-data")).toBe(1);
+		expect($(carousel.$slides[1]).hasClass('active-image')).toBeTruthy();
 	});
 });
