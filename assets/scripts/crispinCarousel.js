@@ -4,6 +4,9 @@ var CrispinCarousel = function(element) {
 	this.getActiveSlide();
 	this.intevalID = null;
 	this.startSlideShow();
+	var self = this;
+	$(element).bind('mouseenter', function(){self.stopSlideShow();});
+	$(element).bind('mouseleave', function(){self.startSlideShow();});
 }
 
 CrispinCarousel.prototype.getActiveSlide = function(){
@@ -22,9 +25,16 @@ CrispinCarousel.prototype.getActiveSlide = function(){
 CrispinCarousel.prototype.getSlides = function(){
 	var slides = $(this.$element).find('li:has(img)').slice(0, 4);
 	var images = [];
+	var carousel = this;
 	slides.each(function(index){
+	  var self = this;
 		images.push($(this).find('img').first().attr('src'));
 		$(this).data('index-data', index);
+		$(this).bind('click', 'img', function(){
+			console.log('self:' + self);
+			console.log('this:' + this);
+			carousel.setNewSlide(self);
+		}); 
 	});
 	this.$view = $(this.$element).find('.carousel-view');
 	this.images = images;
@@ -59,10 +69,12 @@ CrispinCarousel.prototype.setNextSlide = function(){
 CrispinCarousel.prototype.startSlideShow = function(interval){
 	this.interval = typeof interval === 'number' ? interval : 4000;
 	this.slideShow = setInterval($.proxy(this.setNextSlide, this), this.interval);
+	console.log("slideshow start");
 }
 
 CrispinCarousel.prototype.stopSlideShow = function(){
 	clearInterval(this.slideShow);
+	console.log("slideshow stop");
 }
 
 var carousel = new CrispinCarousel('.carousel'); 

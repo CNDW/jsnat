@@ -149,3 +149,4 @@ describe("stopSlideShow()", function(){
 		jasmine.clock().uninstall();
 	});
 });
+
