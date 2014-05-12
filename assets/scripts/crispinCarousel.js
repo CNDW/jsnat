@@ -31,8 +31,6 @@ CrispinCarousel.prototype.getSlides = function(){
 		images.push($(this).find('img').first().attr('src'));
 		$(this).data('index-data', index);
 		$(this).bind('click', 'img', function(){
-			console.log('self:' + self);
-			console.log('this:' + this);
 			carousel.setNewSlide(self);
 		}); 
 	});

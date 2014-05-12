@@ -32,11 +32,17 @@ a {
   display: block;
   float: left; }
 
+.w100 {
+  width: 100%; }
+
 .w70 {
   width: 70%; }
 
 .w30 {
   width: 30%; }
+
+.no-padding {
+  padding: 0; }
 
 html {
   font-size: 100%; }
@@ -46,7 +52,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #282b2e;
-  line-height: 1;
+  line-height: 14px;
   background: url("../images/cityscape.jpg") 50% 0% no-repeat fixed; }
 
 main {
@@ -65,7 +71,29 @@ a {
   text-decoration: none; }
 
 footer {
-  background-color: #2c2c2c; }
+  background-color: #2c2c2c;
+  height: 66px;
+  font-size: 0.75em;
+  font-weight: normal;
+  line-height: 18px; }
+
+.footer-info {
+  padding: 18px 0 0 10px;
+  display: inline-block; }
+
+.footer-link {
+  color: white;
+  text-decoration: none; }
+
+.footer-text {
+  color: #969696; }
+
+.social-icons {
+  padding: 20px 20px 0 0;
+  height: 66px;
+  float: right; }
+  .social-icons li {
+    margin-left: 5px; }
 
 form {
   width: 260px;
@@ -93,27 +121,49 @@ h2 {
 .headline {
   height: 34px;
   width: 100%;
-  margin-right: -5px;
-  background-color: #0084d9;
-  overflow: hidden; }
+  background-color: #0084d9; }
 
 h3 {
   font-size: 0.875em;
   font-weight: bold; }
   h3 ::after {
-    fot-weight: normal; }
+    font-weight: normal; }
 
 h4 {
-  font-size: 0.875em; }
+  font-size: 1em; }
 
 p {
-  font-size: 0.7em; }
+  font-size: 0.875em;
+  margin-top: 8px; }
 
 img {
   width: 100%; }
 
 .icon {
   width: auto; }
+
+.carat {
+  width: auto;
+  margin-left: 4px; }
+
+.hidden {
+  display: none; }
+  .hidden * {
+    display: none; }
+
+input[type=checkbox]:checked ~ label {
+  font-weight: bold; }
+
+input[type=email] {
+  display: block;
+  width: 97%;
+  color: #dbdbdb; }
+
+.divider {
+  display: block;
+  height: 1px; }
+  .divider img {
+    display: block; }
 
 header {
   height: 130px; }
@@ -141,9 +191,8 @@ header {
       .header-nav li:first-child a {
         padding: 0; }
     .header-nav li a {
-      text-decoration: none;
-      padding-left: 8px;
-      color: white; }
+      color: white;
+      padding-left: 8px; }
 
 .search-field {
   box-sizing: border-box;
@@ -196,9 +245,11 @@ header {
   position: relative;
   bottom: 70px;
   height: 70px;
-  padding: 16px; }
-  .view-info p {
-    padding-top: 5px; }
+  padding: 16px;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+  .view-info h4 {
+    padding-top: 10px; }
 
 .carousel-thumbnails {
   display: block;
@@ -219,7 +270,7 @@ header {
   padding: 0 5px 0 5px; }
   .carousel-thumbnail.active-image .thumbnail-view {
     background-color: #0084d9;
-    padding: 3px 3px 0 3px; }
+    padding: 3px 3px 2px 3px; }
     .carousel-thumbnail.active-image .thumbnail-view .indicator {
       background: url("../images/thumbnail-indicator.png") no-repeat center center;
       display: block;
@@ -228,10 +279,76 @@ header {
       top: -9px;
       left: 0; }
 
-.hidden {
-  display: none; }
-  .hidden * {
-    display: none; }
-
 .category-list {
-  font-size: 0.875em; }
+  font-size: 0.875em;
+  margin-top: 6px;
+  line-height: 18px; }
+
+.article {
+  padding: 20px 0 0 0; }
+  .article img {
+    width: 28%; }
+  .article .content {
+    width: 72%;
+    padding: 0 5px 0 15px; }
+
+.video-thumbnails {
+  margin: 0 -15px 0 -10px; }
+
+.video-thumbnail {
+  width: 33%;
+  padding: 10px; }
+
+.side-box {
+  background-color: #dbdbdb;
+  padding: 10px;
+  margin-bottom: 20px; }
+  .side-box .divider {
+    padding: 10px 0 10px 0; }
+  .side-box h3 .icon {
+    margin-right: 6px; }
+
+.side-box-form {
+  width: 100%; }
+  .side-box-form button {
+    position: relative;
+    padding: 0;
+    border-style: none;
+    margin: 10px 0 10px 0;
+    left: 70%; }
+
+.side-box-options {
+  padding: 5px 5px 5px 5px;
+  foght-weight: normal;
+  line-height: 24px;
+  font-size: 0.775em;
+  margin-top: 10px;
+  background-color: #cac9c9; }
+  .side-box-options p {
+    font-size: 0.95em;
+    margin-top: 0; }
+
+.side-box-footer {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #969696;
+  background-color: #cac9c9;
+  margin: 0 -10px -10px -10px;
+  text-align: center;
+  font-size: 0.775em; }
+  .side-box-footer a {
+    color: #282b2e; }
+
+.contest-description-col {
+  padding: 0 0 0 10px; }
+
+.contest-description {
+  font-size: 0.75em;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0; }
+
+.contests li {
+  display: inline-block; }
+  .contests li:first-child {
+    padding-bottom: 10px; }
