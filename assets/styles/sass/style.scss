@@ -171,12 +171,6 @@ h2 {
 	left: 6px;
 }
 
-.headline {
-	height: 34px;
-	width: 100%;
-	background-color: $headline-background-color;
-}
-
 h3 {
 	font-size: 0.875em;
 	font-weight: bold;
@@ -230,7 +224,22 @@ input[type=email] {
 		display: block;
 	}
 }
-
+.headline {
+	height: 34px;
+	background-color: $headline-background-color;
+	position: relative;
+	.banner-flag{
+		width: auto;
+		display: inline-block;
+		position: absolute;
+		left: 0px;
+		bottom: -6px;
+		z-index: -7;
+	}
+	&.extended { 
+		margin-left: -33px;
+	}
+} 
 
 //Specific Header Stylings
 

@@ -118,11 +118,6 @@ h2 {
   top: -3px;
   left: 6px; }
 
-.headline {
-  height: 34px;
-  width: 100%;
-  background-color: #0084d9; }
-
 h3 {
   font-size: 0.875em;
   font-weight: bold; }
@@ -164,6 +159,20 @@ input[type=email] {
   height: 1px; }
   .divider img {
     display: block; }
+
+.headline {
+  height: 34px;
+  background-color: #0084d9;
+  position: relative; }
+  .headline .banner-flag {
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    z-index: -7; }
+  .headline.extended {
+    margin-left: -33px; }
 
 header {
   height: 130px; }
