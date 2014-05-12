@@ -3,7 +3,3 @@ node_modules/
 
 # Ignore cache files
 .sass-cache/
-
-# Ignore large asset files
-assets/fonts/
-assets/images/
