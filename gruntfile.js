@@ -24,7 +24,8 @@ module.exports = function(grunt) {
     sass: {
     	dist: {
     		files: {
-    			'assets/styles/style.css': '**/sass/style.scss'
+    			'assets/styles/style.css': '**/sass/style.scss',
+          'assets/styles/iestyle.css': '**/sass/iestyle.scss'
     		}
     	}
     },
