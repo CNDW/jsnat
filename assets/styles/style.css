@@ -99,7 +99,7 @@ form {
   width: 260px;
   margin: 0 auto; }
 
-nav {
+.nav {
   height: 40px;
   font-size: 0.75em; }
 
@@ -154,6 +154,9 @@ input[type=email] {
   width: 97%;
   color: #dbdbdb; }
 
+::-webkit-search-cancel-button {
+  display: none; }
+
 .divider {
   display: block;
   height: 1px; }
@@ -163,7 +166,8 @@ input[type=email] {
 .headline {
   height: 34px;
   background-color: #0084d9;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .headline .banner-flag {
     width: auto;
     display: inline-block;
@@ -174,9 +178,9 @@ input[type=email] {
   .headline.extended {
     margin-left: -33px; }
 
-header {
+.header {
   height: 130px; }
-  header img {
+  .header img {
     margin-top: 12px;
     width: auto; }
 

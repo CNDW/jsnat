@@ -148,7 +148,7 @@ form {
 	margin: 0 auto;
 }
 
-nav {
+.nav {
 	height: 40px;
 	font-size: 0.75em;
 }
@@ -167,6 +167,7 @@ h2 {
 	background-color: $headline-background-color;
 	display: inline-block;
 	position: relative;
+	overflow: hidden;
 	top: -3px;
 	left: 6px;
 }
@@ -217,6 +218,10 @@ input[type=email] {
 	color: $light-gray;
 }
 
+::-webkit-search-cancel-button { 
+	display: none; 
+}
+
 .divider {
 	display: block;
 	height: 1px;
@@ -228,6 +233,7 @@ input[type=email] {
 	height: 34px;
 	background-color: $headline-background-color;
 	position: relative;
+	overflow: hidden;
 	.banner-flag{
 		width: auto;
 		display: inline-block;
@@ -243,7 +249,7 @@ input[type=email] {
 
 //Specific Header Stylings
 
-header {
+.header {
 	height: 130px;
 	img {
 		margin-top: 12px;
@@ -284,6 +290,8 @@ header {
 .search-field {
 	box-sizing: border-box;
 	position: relative;
+	overflow: hidden;
+	background-image: u
 	background-image: url("../images/searchbar-background.jpg");
 	background-repeat: no-repeat;
 	height: 24px;
@@ -320,6 +328,7 @@ header {
 			top: -4px;
 			background-color: $primary-background-color;
 			position: relative;
+			overflow: hidden;
 			height: 44px;
 			border-width: 1px 1px 0 1px;
 		}
@@ -336,6 +345,7 @@ header {
 .view-info {
 	background-image: url("../images/overlay.png");
 	position: relative;
+	overflow: hidden;
 	bottom: 70px;
 	height: 70px;
 	padding: 16px;
@@ -360,6 +370,7 @@ header {
 }
 .carousel-thumbnail { 
 	position: relative;
+	overflow: hidden;
 	width: 25%;
 	display: inline-block;
 	padding: 0 5px 0 5px;
@@ -424,6 +435,7 @@ header {
 	width: 100%;
 	button {
 		position: relative;
+		overflow: hidden;
 		padding: 0;
 		border-style: none;
 		margin: 10px 0 10px 0;
