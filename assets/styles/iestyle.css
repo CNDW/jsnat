@@ -51,42 +51,6 @@ a {
     text-decoration: none;
     border: 0 none; }
 
-.footer {
-  background-color: #2c2c2c;
-  height: 66px;
-  width: 1000px;
-  font-size: 0.75em;
-  font-weight: normal;
-  line-height: 18px; }
-
-.footer-info {
-  margin-top: 16px;
-  margin-left: 20px;
-  display: inline;
-  float: left;
-  height: 66px; }
-
-.footer-link {
-  color: white;
-  text-decoration: none; }
-
-.footer-text {
-  color: #969696; }
-
-.social-icons {
-  display: inline;
-  line-height: 66px;
-  height: 66px;
-  margin-right: 20px;
-  float: right; }
-  .social-icons a {
-    color: none; }
-  .social-icons li {
-    display: inline;
-    margin-left: 8px; }
-    .social-icons li .icon {
-      padding-left: 0; }
-
 form {
   width: 260px;
   margin: 0 auto; }
@@ -551,6 +515,42 @@ img {
     width: 166px;
     height: 55px;
     margin-bottom: 9px; }
+
+.footer {
+  background-color: #2c2c2c;
+  height: 66px;
+  width: 1000px;
+  font-size: 0.75em;
+  font-weight: normal;
+  line-height: 18px; }
+
+.footer-info {
+  margin-top: 16px;
+  margin-left: 20px;
+  display: inline;
+  float: left;
+  height: 66px; }
+
+.footer-link {
+  color: white;
+  text-decoration: none; }
+
+.footer-text {
+  color: #969696; }
+
+.social-icons {
+  display: inline;
+  line-height: 66px;
+  height: 66px;
+  margin-right: 20px;
+  float: right; }
+  .social-icons a {
+    color: none; }
+  .social-icons li {
+    display: inline;
+    margin-left: 8px; }
+    .social-icons li .icon {
+      padding-left: 0; }
 
 .ie.section {
   position: absolute;
