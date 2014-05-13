@@ -67,12 +67,10 @@ CrispinCarousel.prototype.setNextSlide = function(){
 CrispinCarousel.prototype.startSlideShow = function(interval){
 	this.interval = typeof interval === 'number' ? interval : 4000;
 	this.slideShow = setInterval($.proxy(this.setNextSlide, this), this.interval);
-	console.log("slideshow start");
 }
 
 CrispinCarousel.prototype.stopSlideShow = function(){
 	clearInterval(this.slideShow);
-	console.log("slideshow stop");
 }
 
 var carousel = new CrispinCarousel('.carousel'); 

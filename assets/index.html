@@ -5,17 +5,26 @@
 		<meta name="description" content="Crispin & Mulberry: World Travelers">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Crispin & Mulberry: World Travelers</title>
+		<!--[if !IE]>-->
 		<link rel='stylesheet' href='styles/style.css'>
-		<!--[if lt IE 9]>
+		<!--<![endif]-->
+		<!--[if IE]>
 		<link rel='stylesheet' href='styles/iestyle.css'>
 		<![endif]-->
 	</head>
 
 	<body class="section">
+			<!--[if !IE]>-->		
 		<div class="col body-offset"></div>
+			<!--<![endif]-->
 
 		<div class="col body-col">
+			<!--[if !IE]>-->
+			<header class="col w100 no-padding">
+			<!--<![endif]-->
+			<!--[if IE]>
 			<div class="header col w100 no-padding">
+			<![endif]-->
 				<img src="images/logo.png" alt="Crispin & Mulberry: World Travelers">
 				<div class="header-actions">
 					<form action="">
@@ -28,17 +37,35 @@
 						<li>|<a href="">My Articles</a></li>
 					</ul>	
 				</div>
+			<!--[if !IE]>-->
+			</header>
+			<!--<![endif]-->
+			<!--[if IE]>
 			</div>
+			<![endif]-->
 
-			<main class="col w100">
+			<!--[if !IE]>--><main class="col w100"><!--<![endif]-->
+			<!--[if IE]><div class="main col w100 no-padding"><![endif]-->
 
 				<div class="nav no-padding">
-					<ul class="nav-bar">
-						<li class="nav-button"><a href="">Destinations</a></li><li class="nav-button"><a href="">Getaways</a></li><li class="nav-button"><a href="">Travel Tips</a></li><li class="nav-button"><a href="" class="active-link">News & Features</a></li><li class="nav-button"><a href="">Contests</a></li><li class="nav-button"><a href="">Contact Us</a></li>
-					</ul>
+					<div class="nav-bar no-padding">
+						<div class="no-padding nav-button">
+							<a href="">Destinations</a>
+						</div><div class="no-padding nav-button">
+							<a href="">Getaways</a>
+						</div><div class="no-padding nav-button">
+							<a href="">Travel Tips</a>
+						</div><div class="no-padding nav-button">
+							<a href="" class="active-link">News & Features</a>
+						</div><div class="no-padding nav-button">
+							<a href="">Contests</a>
+						</div><div class="no-padding nav-button">
+						<a href="">Contact Us</a>
+					</div>
+					</div>
 				</div>
 				<div class="container">
-					<div class="section">
+					<div class="section ie">
 						<div class="carousel col w70">
 							<div class="carousel-view">
 								<img src="images/slide1.jpg">
@@ -48,7 +75,7 @@
 								</div>
 							</div>
 							<ul class="carousel-thumbnails">
-								<li class="carousel-thumbnail active-image">
+								<li class="carousel-thumbnail thumb1 active-image">
 									<div class="thumbnail-view">
 										<div class="indicator"></div>
 										<img src="images/slide1.jpg">
@@ -57,7 +84,7 @@
 											<h4>Check out the USS Torsk at Baltimore's historic Maritime Museum.</h4>
 										</div>
 									</div>
-								</li><li class="carousel-thumbnail active-image">
+								</li><li class="carousel-thumbnail thumb2 active-image">
 									<div class="thumbnail-view">
 										<div class="indicator"></div>
 										<img src="images/slide2.jpg">
@@ -66,7 +93,7 @@
 											<h4>Enjoy the best gondola ride on this side of the Atlantic Ocean.</h4>
 										</div>
 									</div>
-								</li><li class="carousel-thumbnail">
+								</li><li class="carousel-thumbnail thumb3">
 									<div class="thumbnail-view">
 										<div class="indicator"></div>
 										<img src="images/slide3.jpg">
@@ -75,7 +102,7 @@
 											<h4>Enjoy the pubs along the river Thames & get spectacular view from the London Eye</h4>
 										</div>
 									</div>
-								</li><li class="carousel-thumbnail">
+								</li><li class="carousel-thumbnail thumb4">
 									<div class="thumbnail-view">
 										<div class="indicator"></div>
 										<img src="images/slide4.jpg">
@@ -89,9 +116,9 @@
 						</div>
 
 						<div class="ads col w30">
-							<img src="images/ad1.jpg">
-							<div></div>
-							<img src="images/ad2.jpg">
+							<a href=""><img src="images/ad1.jpg"></a>
+							<div class="ie"></div>
+							<a href=""><img src="images/ad2.jpg"></a>
 						</div>
 					</div>
 
@@ -99,39 +126,42 @@
 						<img src="images/divider.png">
 					</div>
 
-					<div class="section">
-						<div class="col w70 no-padding">
+					<div class="section ie bottom">
+						<div class="col w70 no-padding ie bottom-left">
 							<div class="categories col w30">
 
 								<div class="headline extended">
 									<img src="images/banner-flag.png" class="banner-flag">
+									<!--[if IE]><div class="ie-flag"></div><![endif]-->
 									<img src="images/category-icon.png" class="icon">
 									<h2>BROWSE CATEGORIES</h2>
 								</div>
-								<div>
+								<div class="ie">
 									<h3>Popular Destinations<img class="carat" src="images/carat-icon.png"></h3>
 									<ul class="category-list">
-										<li>United States</li><br>
-										<li>Europe</li><br>
-										<li>Latin America</li><br>
-										<li>South Pacific</li><br>
-										<li>Caribbean</li><br>
-										<li>Australia</li><br>
-										<li>All Destinations</li><br>
+										<li><a href="">United States</a></li>
+										<li><a href="">Europe</a></li>
+										<li><a href="">Latin America</a></li>
+										<li><a href="">South Pacific</a></li>
+										<li><a href="">Caribbean</a></li>
+										<li><a href="">Australia</a></li>
+										<li><a href="">All Destinations</a></li>
 									</ul>
+								<!--[if !IE]>-->
 								</div>
 								<div>
+								<!--<![endif]-->
 									<h3>Getaways<img class="carat" src="images/carat-icon.png"></h3>
 									<ul class="category-list">
-										<li>Adventure Vacations</li></br>
-										<li>Beach Vacations</li></br>
-										<li>Cruise Vacations</li></br>
-										<li>Culinary Vacations</li></br>
-										<li>Family Vacations</li></br>
-										<li>Luxury Vacations</li></br>
-										<li>Romantic Vacations</li></br>
-										<li>Ski Vacations</li></br>
-										<li>All Vacations</li></br>
+										<li><a href="">Adventure Vacations</a></li>
+										<li><a href="">Beach Vacations</a></li>
+										<li><a href="">Cruise Vacations</a></li>
+										<li><a href="">Culinary Vacations</a></li>
+										<li><a href="">Family Vacations</a></li>
+										<li><a href="">Luxury Vacations</a></li>
+										<li><a href="">Romantic Vacations</a></li>
+										<li><a href="">Ski Vacations</a></li>
+										<li><a href="">All Vacations</a></li>
 									</ul>
 								</div>
 							</div>
@@ -142,26 +172,38 @@
 									<img src="images/article-icon.png" class="icon">
 									<h2>RECENT ARTICLES</h2>
 								</div>
-								<ul>
-									<li class="article col">
-										<img src="images/articlethumb1.jpg" class="col">
+								<ul class="article-list">
+									<li class="article ie1 col">
+										<a href="">
+											<img src="images/articlethumb1.jpg" class="col">
+										</a>
 										<div class="content col">
-											<h3>Don't Miss the Parades at DisneyWorld</h3>
-											<p>The parades at Disney World are a one of a kind celebration full of all your favorite Disney characters and music. The entertainment never stops as parades are scheduled throughout the entire day.</p>
+											<h3>
+												<a href="">Don't Miss the Parades at DisneyWorld</a>
+											</h3>
+											<p><a href="">The parades at Disney World are a one of a kind celebration full of all your favorite Disney characters and music. The entertainment never stops as parades are scheduled throughout the entire day.</a></p>
 										</div>
 									</li>
-									<li class="article col">
-										<img src="images/articlethumb2.jpg" class="col">
+									<li class="article ie2 col">
+										<a href="">
+											<img src="images/articlethumb2.jpg" class="col">
+										</a>
 										<div class="content col">
-											<h3>Get Your Kicks in Downtown Las Vegas</h3>
-											<p>Get off the strip and check out what Old Vegas has to offer. From shark infested water slides to the nightly Fremont Street Experience it's sure to please adventurers of all ages.</p>
+											<h3>
+												<a href="">Get Your Kicks in Downtown Las Vegas</a>
+											</h3>
+											<p><a href="">Get off the strip and check out what Old Vegas has to offer. From shark infested water slides to the nightly Fremont Street Experience it's sure to please adventurers of all ages.</a></p>
 										</div>
 									</li>
-									<li class="article col">
-										<img src="images/articlethumb3.jpg" class="col">
+									<li class="article ie3 col">
+										<a href="">
+											<img src="images/articlethumb3.jpg" class="col">
+										</a>
 										<div class="content col">
-											<h3>Don't Miss Deep Dish in Chicago</h3>
-											<p>Deep dish pizza is as synonymous with Chicago as Thin Crust is to New York. Any way you slice it, any trip to the windy city is incomplete without an italian flavor explosion in your mouth.</p>
+											<h3>
+												<a href="">Don't Miss Deep Dish in Chicago</a>
+											</h3>
+											<p><a href="">Deep dish pizza is as synonymous with Chicago as Thin Crust is to New York. Any way you slice it, any trip to the windy city is incomplete without an italian flavor explosion in your mouth.</a></p>
 										</div>
 									</li>
 								</ul>
@@ -170,35 +212,48 @@
 							<div class="videos col w100">
 								<div class="headline extended">
 									<img src="images/banner-flag.png" class="banner-flag">
+									<!--[if IE]><div class="ie-flag"></div><![endif]-->
 									<img src="images/video-icon.png" class="icon">
 									<h2>POPULAR VIDEOS</h2>
 								</div>
 								<ul class="video-thumbnails">
 									<li class="video-thumbnail col">
-										<img src="images/videothumb1.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb1.jpg" class="thumbnail">
+										</a>
 									</li><li class="video-thumbnail col">
-										<img src="images/videothumb2.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb2.jpg" class="thumbnail">
+										</a>
 									</li><li class="video-thumbnail col">
-										<img src="images/videothumb3.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb3.jpg" class="thumbnail">
+										</a>
 									</li><li class="video-thumbnail col">
-										<img src="images/videothumb4.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb4.jpg" class="thumbnail">
+										</a>
 									</li><li class="video-thumbnail col">
-										<img src="images/videothumb5.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb5.jpg" class="thumbnail">
+										</a>
 									</li><li class="video-thumbnail col">
-										<img src="images/videothumb6.jpg" class="thumbnail">
+										<a href="">
+											<img src="images/videothumb6.jpg" class="thumbnail">
+										</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 
-						<div class="col w30">
+						<div class="col w30 ie bottom-right">
 							<div class="side-box col w100">
 								<h3><img src="images/envelope-icon.png" class="icon">SIGN UP FOR OUR NEWSLETTER</h3>
 								<div class="divider">
 									<img class="" src="images/divider-dark.png">
 								</div>
 								<form class="side-box-form" action="">
-									<input id="newsletter-signup" type="email" value="user@domain.com">
+									<input id="newsletter-signup" class="newsletter-email-input" type="email" value="user@domain.com">
 									<div class="side-box-options">
 										<p><em>Select the newsletters you'd like to recieve</em></p>
 										<input id="getaway-checkbox" type="checkbox" value="true" checked="true" name="Destinations and Getaways">
@@ -213,26 +268,28 @@
 								</div>
 							</div>
 
-							<div class="side-box col w100">
+							<div class="side-box col w100 ie">
 								<h3><img src="images/trophy-icon.png" class="icon">CURRENT CONTESTS</h3>
 								<div class="divider">
 									<img class="" src="images/divider-dark.png">
 								</div>
 								<ul class="contests">
 									<li>
-										<div class="col w30 no-padding">
-											<img src="images/contestthumb1.jpg">
+										<div class="col w30 no-padding contest-thumbnail-col">
+											<a href="">
+												<img src="images/contestthumb1.jpg"></a>
 										</div>
 										<div class="col w70 contest-description-col">
-											<p class="contest-description">Win an all inclusive trip to visit the famous Yeti Shrine deep in the heart of Asia</p>
+											<p class="contest-description"><a href="">Win an all inclusive trip to visit the famous Yeti Shrine deep in the heart of Asia</a></p>
 										</div>
 									</li>
 									<li>
-										<div class="col w30 no-padding">
-											<img src="images/contestthumb2.jpg">
+										<div class="col w30 no-padding contest-thumbnail-col">
+											<a href="">
+												<img src="images/contestthumb2.jpg"></a>
 										</div>
 										<div class="col w70 contest-description-col">
-											<p class="contest-description">Win a mythical trip to Bath that includes a guided tour of Stonehenge</p>
+											<p class="contest-description"><a href="">Win a mythical trip to Bath that includes a guided tour of Stonehenge</a></p>
 										</div>
 
 									</li>
@@ -249,9 +306,12 @@
 
 					</div>
 				</div>
-			</main>
+			<!--[if !IE]>--></main><!--<![endif]-->
+			<!--[if IE]></div><![endif]-->
 
-			<footer class="col w100">
+			
+			<!--[if !IE]>--><footer class="col w100"><!--<![endif]-->
+			<!--[if IE]><div class="footer col w100"><![endif]-->
 				<div class="footer-info">
 					<a href="#" class="footer-link">Privacy Policy  |  </a><a href="#" class="footer-link">Terms of Use  |  </a><a href="#" class="footer-link">Site Map  |  </a><a href="#" class="footer-link">Contact Us</a><br>
 					<span class="footer-text">© 2013 Crispin & Mulberry  |  1640 Riverside Drive, Hill Valley, California, 95420</span>
@@ -263,7 +323,8 @@
 					<li><a href=""><img src="images/vimeo-icon.png" class="icon"></a></li>
 					<li><a href=""><img src="images/rss-icon.png" class="icon"></a></li>
 				</ul>
-			</footer> 
+			<!--[if !IE]>--></footer><!--<![endif]-->
+			<!--[if IE]></div><![endif]-->
 		</div>
 
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
